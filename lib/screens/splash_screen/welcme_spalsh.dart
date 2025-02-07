@@ -1,3 +1,4 @@
+import 'package:ecomerce_app/auth/login.dart';
 import 'package:ecomerce_app/common/app_color.dart';
 import 'package:ecomerce_app/common/app_image.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,9 @@ class _WelcmeSpalshState extends State<WelcmeSpalsh> {
       if (positionNumber < totalPages - 1) {
         positionNumber++;
       }
-      else{}
+      else{
+         Navigator.of(context).pushNamed(Login.routeName);
+      }
     });
   }
 
@@ -57,7 +60,7 @@ class _WelcmeSpalshState extends State<WelcmeSpalsh> {
     setState(() {
       positionNumber = totalPages - 1;
     });
-    // Navigator.of(context).pushNamed(WelcomeSplashTwo.routeName);
+     Navigator.of(context).pushNamed(Login.routeName);
   }
 
   @override
